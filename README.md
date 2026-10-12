@@ -25,13 +25,13 @@ Quatro setores com sete desafios cada (28 no total):
 - Otimização de laços, custo das comparações e ordenação;
 - Vetores, média, contagem, laços sequenciais e matrizes.
 
-Há questões de alternativas, cálculos e justificativas escritas. Todas são **questões de treino inéditas**, alinhadas às competências da aula e da A1; não são reproduções da prova.
+Todos os 28 desafios são questões de múltipla escolha, inclusive os desafios de cálculo e análise técnica. Todas são **questões de treino inéditas**, alinhadas às competências da aula e da A1; não são reproduções da prova.
 
 ## Recursos
 
 - Modo campanha, 4 chefes de setor, HUD com energia, XP, combo e pontuação;
 - Feedback explicativo após cada resposta;
-- Justificativas com autoavaliação por critérios (sem alegar correção automática);
+- Correção imediata, com explicações conceituais após cada resposta;
 - Exportação JSON individual para estudo pessoal;
 - Nenhum banco de dados, login ou serviço externo é necessário;
 - Sem trilhas sonoras, imagens ou personagens de franquias existentes.
@@ -39,3 +39,7 @@ Há questões de alternativas, cálculos e justificativas escritas. Todas são *
 ### Importante
 
 Os dados da partida ficam apenas na sessão atual do navegador e podem se perder ao recarregar/fechar; cada estudante pode baixar seu relatório ao finalizar. O relatório JSON não é um registro autenticado de desempenho, portanto não é indicado para nota oficial. O jogo não divulga o gabarito da A1: usa apenas as habilidades previstas na avaliação para compor desafios alternativos.
+
+## Interface clara e acessibilidade
+
+Fundo branco, texto escuro, cartões discretos, alto contraste de leitura, navegação clara, campos de resposta com rótulos e feedback não dependente apenas de cores. A ambientação de FPS retrô aparece nos títulos e nas missões, sem comprometer a legibilidade.

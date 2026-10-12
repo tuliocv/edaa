@@ -13,40 +13,46 @@ st.set_page_config(page_title='NEON COMPLEXITY | Operação Big-O', page_icon='�
 CSS = r'''
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Press+Start+2P&display=swap');
-:root {--fire:#ff684a;--lime:#baff5c;--cyan:#45e8f2;--purple:#9e77ff;--bg:#090b16;--ink:#eaeef9}
-html,body,[class*="css"],.stApp{font-family:'Rajdhani',sans-serif!important}
-.stApp {background:radial-gradient(circle at 80% 0%,rgba(128,28,92,.20),transparent 38%),radial-gradient(circle at 10% 25%,rgba(14,151,185,.11),transparent 42%),#080b16;color:var(--ink)}
-[data-testid="stHeader"]{background:transparent}
-[data-testid="stSidebar"]{background:#101321;border-right:1px solid rgba(69,232,242,.20)}
-section[data-testid="stSidebar"] *{color:#e3eaf7}
-.block-container{padding-top:1.6rem;max-width:1200px}
-h1,h2,h3{font-family:'Rajdhani',sans-serif!important;font-weight:700!important;letter-spacing:.045em;color:#fff!important}
-h1{font-size:clamp(2rem,4vw,3.7rem)!important}
-p,li,label{font-size:1.12rem!important}
-.smallcap{font-family:'Press Start 2P',monospace;font-size:.57rem;letter-spacing:.09em;color:var(--cyan);line-height:2.1}
-.hero{padding:2rem 1.7rem;border:1px solid rgba(69,232,242,.46);border-radius:5px;background:linear-gradient(110deg,rgba(8,20,37,.96),rgba(29,17,45,.96));box-shadow:inset 0 0 32px rgba(69,232,242,.05),0 0 25px rgba(69,232,242,.10);position:relative;overflow:hidden}
-.hero:after{content:'';position:absolute;right:-70px;top:-80px;width:300px;height:300px;border:2px solid rgba(255,104,74,.16);transform:rotate(45deg);pointer-events:none}
-.hero-title{font-family:'Press Start 2P',monospace;font-size:clamp(1.05rem,2.8vw,2rem);line-height:1.7;background:linear-gradient(90deg,#baff5c,#45e8f2);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero-sub{font-size:1.3rem;color:#c1cde0;margin-top:.7rem}
-.stat{background:#131829;border-left:3px solid var(--cyan);border-radius:3px;padding:14px 13px;min-height:94px}
-.stat .value{font-family:'Press Start 2P';font-size:1.08rem;color:var(--lime);line-height:1.7}
-.stat .label{font-size:.9rem;color:#a3b6cb;text-transform:uppercase;letter-spacing:.07em}
-.mission{border:1px solid rgba(158,119,255,.38);background:#151728;border-radius:4px;padding:1.1rem 1.4rem;margin:1rem 0}
-.mission-title{font-family:'Press Start 2P',monospace;color:#ffb68b;font-size:.79rem;line-height:1.9}
-.lore{color:#b5c4d8;font-size:1.08rem}
-.code-frame{background:#060d15;border:1px solid rgba(69,232,242,.26);padding:16px 17px;border-radius:4px;font: .98rem/1.7 'Consolas','Courier New',monospace;color:#9bf2c1;white-space:pre-wrap;overflow-x:auto}
-[data-testid="stRadio"]{padding:12px;background:#111728;border:1px solid #27354c;border-radius:4px}
-[data-testid="stRadio"] label{font-size:1.05rem!important}
-div.stButton>button[kind="primary"]{background:linear-gradient(90deg,#c83e54,#ef7245)!important;border:1px solid #ffa277;color:white!important;font-family:'Rajdhani',sans-serif!important;font-weight:700;font-size:1.12rem;letter-spacing:.06em}
-div.stButton>button{border-radius:3px!important;min-height:45px;font-size:1.06rem;font-weight:700}
-div.stButton>button:not([kind="primary"]){background:#172038;border:1px solid #3b5678;color:#d3eaff}
-[data-testid="stProgressBar"]>div>div{background:linear-gradient(90deg,#ff7149,#c0ff5f)!important}
-.correct{border-left:4px solid #baff5c;padding:1rem 1.2rem;background:rgba(104,216,115,.10);font-size:1.12rem}
-.wrong{border-left:4px solid #ff684a;padding:1rem 1.2rem;background:rgba(255,104,74,.10);font-size:1.12rem}
-.brief{background:rgba(69,232,242,.075);border:1px solid rgba(69,232,242,.25);padding:1rem 1.3rem;border-radius:3px}
-.hint{background:#13182b;border-left:3px solid #a98bfa;padding:.85rem 1.1rem;color:#ccd5e8}
-.footer{color:#73849b;font-size:.9rem;text-align:center;padding:2rem 0}
-hr{border-color:#27314c!important}
+:root{--navy:#182640;--ink:#24324a;--sub:#53627a;--blue:#2463a5;--green:#147d56;--orange:#b45c19;--line:#dce4ee;--bg:#fff}
+html,body,[class*="css"],.stApp{font-family:'Rajdhani',system-ui,sans-serif!important}
+.stApp{background:#fff!important;color:var(--ink)!important}
+[data-testid="stHeader"]{background:#fff!important}
+[data-testid="stSidebar"]{background:#f7f9fc!important;border-right:1px solid var(--line)!important}
+[data-testid="stSidebar"] *{color:var(--ink)}
+.block-container{padding-top:1.4rem;max-width:1120px;padding-bottom:3rem}
+h1,h2,h3,h4{font-family:'Rajdhani',sans-serif!important;color:var(--navy)!important;letter-spacing:.005em;font-weight:700!important}
+p,li,label{font-size:1.06rem!important;color:var(--ink)}
+.smallcap{font-family:'Press Start 2P',monospace;font-size:.59rem;line-height:2;color:#265b91;letter-spacing:.03em}
+.hero{padding:2rem 1.75rem;border:1px solid #c9d9e9;border-left:6px solid #2364a5;border-radius:14px;background:#f2f7fc;box-shadow:0 6px 18px rgba(24,38,64,.06)}
+.hero-title{font-family:'Press Start 2P',monospace;color:#1b497b;font-size:clamp(1.15rem,2.7vw,2rem);line-height:1.8;overflow-wrap:anywhere}
+.hero-sub{color:#3c536c;font-size:1.18rem;margin-top:.5rem}
+.stat{background:#fff;border:1px solid #dbe5ee;border-top:3px solid #2d699f;border-radius:10px;padding:15px 13px;min-height:95px;box-shadow:0 2px 8px rgba(25,52,80,.04)}
+.stat .value{font-family:'Rajdhani',sans-serif;font-size:1.75rem;font-weight:700;color:#1c527f;line-height:1.4}
+.stat .label{font-size:.92rem;color:#53627a;text-transform:uppercase;letter-spacing:.035em}
+.mission{border:1px solid #dae3ed;border-radius:12px;background:#f8fafd;padding:1.15rem 1.35rem;margin:1rem 0}
+.mission-title{color:#1c527f;font-weight:700;font-size:1.3rem;line-height:1.45}
+.lore{color:#4c5e75;font-size:1.04rem;line-height:1.5}
+.code-frame{background:#f5f7fb;border:1px solid #dce4ec;padding:16px 17px;border-radius:10px;font:.98rem/1.7 'Consolas','Courier New',monospace;color:#203c65;white-space:pre-wrap;overflow-x:auto}
+[data-testid="stRadio"]{background:#fff;border:1px solid #dce4ee;border-radius:12px;padding:14px 16px}
+[data-testid="stRadio"] label{font-size:1.06rem!important;line-height:1.55!important;color:#263852!important}
+[data-testid="stRadio"] [role="radiogroup"]{gap:.35rem}
+[data-testid="stRadio"] label[data-baseweb="radio"]{border:1px solid #e2e9f0;border-radius:8px;padding:9px 12px;background:#fff}
+[data-testid="stRadio"] label[data-baseweb="radio"]:hover{background:#f1f6fc;border-color:#9ebcda}
+div.stButton>button{border-radius:9px!important;min-height:44px!important;font-size:1.06rem!important;font-weight:700!important;transition:background .15s}
+div.stButton>button[kind="primary"]{background:#255f99!important;border:1px solid #255f99!important;color:#fff!important}
+div.stButton>button[kind="primary"]:hover{background:#174b7d!important}
+div.stButton>button:not([kind="primary"]){background:#fff!important;border:1px solid #a7bbcf!important;color:#215683!important}
+div.stButton>button:focus-visible{outline:3px solid #f3ab50!important;outline-offset:2px}
+[data-testid="stProgressBar"]>div>div{background:#2870a8!important}
+.correct,.wrong{border-radius:10px;padding:1rem 1.2rem;font-size:1.08rem;line-height:1.6}
+.correct{border:1px solid #b8ddc9;border-left:5px solid #168252;background:#eef8f2;color:#174d37}
+.wrong{border:1px solid #e9cbc2;border-left:5px solid #b65133;background:#fff4ef;color:#793b29}
+.brief{background:#f2f7fc;border:1px solid #cddfeb;padding:1.1rem 1.3rem;border-radius:10px;color:#27445f}
+.hint{background:#fff8ed;border-left:4px solid #b9722b;padding:.85rem 1.1rem;color:#66441f}
+.footer{color:#62728a;font-size:.91rem;text-align:center;padding:2rem 0}
+hr{border-color:#e0e7ef!important}
+[data-testid="stAlert"]{border-radius:10px}
+@media(max-width:720px){.block-container{padding:1rem}.hero{padding:1.25rem}.stat{min-height:84px}.smallcap{font-size:.49rem}}
 </style>'''
 st.markdown(CSS,unsafe_allow_html=True)
 
@@ -89,6 +95,41 @@ STAGES = [
   dict(t='explain',q='Justifique por que uma solução que usa vetor e dois laços sequenciais para calcular a média e contar valores abaixo dela possui custo linear.',must=['vetor','sequenc','2n'],model='O vetor organiza todas as notas em uma estrutura indexada. O primeiro laço percorre n posições e o segundo percorre mais n posições, mas são sequenciais. Assim, T(n)=n+n=2n e sua complexidade é O(n).',concept='Distinguir laços consecutivos de laços aninhados é essencial.'),
  ]),
 ]
+
+
+# Todos os itens seguem o mesmo formato acessível de múltipla escolha.
+# Respostas certas e feedbacks são preservados, inclusive nos antigos itens abertos.
+CONVERSIONS = {
+ (0,4): ('1.440.000', ['144.000','1.440.000','2.400','14.400.000']),
+ (0,6): ('Porque a correção em entradas pequenas não garante eficiência quando n cresce.', ['Porque o número de linhas do código aumenta automaticamente.', 'Porque a correção em entradas pequenas não garante eficiência quando n cresce.', 'Porque todo algoritmo se torna O(1) com mais memória.', 'Porque um programa correto não precisa de testes de desempenho.']),
+ (1,4): ('14', ['1','7','13','14']),
+ (1,6): ('A ordenação prévia e sua manutenção podem custar mais do que o benefício para poucas consultas.', ['Busca binária funciona da mesma forma em qualquer vetor.', 'A ordenação prévia e sua manutenção podem custar mais do que o benefício para poucas consultas.', 'Busca binária é sempre quadrática.', 'Busca sequencial precisa que os dados estejam ordenados.']),
+ (2,1): ('36', ['9','18','36','72']),
+ (2,6): ('Não. Reduzir comparações por um fator constante mantém o crescimento O(n²).', ['Sim. Qualquer economia de comparações muda a classe para O(n).', 'Não. Reduzir comparações por um fator constante mantém o crescimento O(n²).', 'Sim. O resultado passa a ser O(log n).', 'Não. O algoritmo original era O(1).']),
+ (3,3): ('560', ['280','560','78.400','840']),
+ (3,6): ('Os laços são sequenciais: n + n = 2n, que permanece O(n).', ['Os laços são sequenciais: n + n = 2n, que permanece O(n).', 'Dois laços sempre levam a n², mesmo sem aninhamento.', 'Um vetor torna todos os laços O(1).', 'A complexidade é O(log n) porque a média divide a soma por n.']),
+}
+for (setor, idx), (answer, options) in CONVERSIONS.items():
+    item = STAGES[setor]['questions'][idx]
+    item['t'] = 'mcq'
+    item['answer'] = answer
+    item['options'] = options
+    item.pop('must', None)
+    if 'model' in item:
+        item['explanation'] = item.pop('model')
+    item['q'] = (item['q']
+        .replace('Escreva uma justificativa técnica explicando por que a equipe precisa analisar sua eficiência.', 'Qual justificativa técnica explica a necessidade de analisar a eficiência?')
+        .replace('Explique por que trocar uma busca sequencial por binária não garante automaticamente a melhor solução em qualquer sistema.', 'Por que trocar busca sequencial por binária não garante automaticamente a melhor solução?')
+        .replace('Escreva uma resposta técnica.', 'Qual resposta técnica está correta?')
+        .replace('Justifique por que uma solução que usa vetor e dois laços sequenciais para calcular a média e contar valores abaixo dela possui custo linear.', 'Por que utilizar um vetor com dois laços sequenciais para calcular média e contar valores abaixo dela tem custo linear?')
+        .replace('quantas comparações são realizadas?', 'qual é o número correto de comparações?')
+        .replace('quantas comparações de igualdade são necessárias?', 'quantas comparações de igualdade são necessárias?')
+        .replace('quantos pares distintos (sem auto-comparação e sem ordem) existem?', 'quantos pares distintos (sem auto-comparação e sem ordem) existem?')
+        .replace('Quantas visitas aos elementos são feitas no total?', 'Quantas visitas aos elementos são feitas no total?'))
+    if isinstance(item['answer'], str) and item['answer'] not in item['options']:
+        raise ValueError('Alternativa correta não encontrada')
+assert sum(len(s['questions']) for s in STAGES) == 28
+assert all(q['t']=='mcq' and q['answer'] in q['options'] for s in STAGES for q in s['questions'])
 
 
 def initialize():
@@ -160,8 +201,8 @@ def sidebar():
 def intro():
     st.markdown('## 🚀 INICIAR CAMPANHA')
     st.markdown('''<div class="brief"><b>BRIEFING DA MISSÃO</b><br>
-    Quatro setores hostis. Vinte e oito desafios de raciocínio computacional. Cada resposta correta gera XP e recupera energia; cada erro custa energia e ativa uma explicação. A campanha continua mesmo se sua energia zerar: aprender faz parte da missão.<br><br>
-    <b>Armas:</b> interpretação de código, Big-O, busca, vetores, laços e justificativas técnicas.<br>
+    Quatro setores temáticos. Vinte e oito questões de múltipla escolha para revisar conceitos essenciais. Cada resposta correta gera XP e recupera energia; cada erro custa energia e ativa uma explicação. A campanha continua mesmo se sua energia zerar: aprender faz parte da missão.<br><br>
+    <b>Armas:</b> interpretação de código, Big-O, busca, vetores, laços e análise técnica.<br>
     <b>Objetivo:</b> compreender por que a solução funciona e como seu custo cresce — não memorizar o gabarito de uma prova.</div>''',unsafe_allow_html=True)
     alias=st.text_input('Codinome do agente',value='CADETE_01',max_chars=24)
     c1,c2=st.columns([1,2])
@@ -183,30 +224,15 @@ def campaign():
     st.markdown(f'### 🎯 ALVO {i+1:02d}: {q["q"]}')
     key=f'a_{g["stage"]}_{i}'
     if not g['resolved']:
-        if q['t']=='mcq':
-            a=st.radio('Selecione sua resposta:',q['options'],index=None,key=key)
-            if st.button('⚡ CONFIRMAR DISPARO',type='primary',disabled=a is None,use_container_width=True):score(a==q['answer'],a);st.rerun()
-        elif q['t']=='numeric':
-            a=st.number_input('Informe o número de operações:',min_value=0,value=None,step=1,key=key,placeholder='Digite um número inteiro')
-            if st.button('⚡ EXECUTAR CÁLCULO',type='primary',disabled=a is None,use_container_width=True):score(a==q['answer'],a);st.rerun()
-        else:
-            st.markdown('<div class="hint">📡 DESAFIO DE JUSTIFICATIVA: escreva com suas palavras. Na etapa seguinte, compare sua resposta com os critérios e faça uma autoavaliação orientada.</div>',unsafe_allow_html=True)
-            text=st.text_area('Sua explicação técnica:',height=170,key=key,placeholder='Explique como você chegou à conclusão. Qual é o tamanho da entrada? Qual trabalho se repete?')
-            if st.button('📨 ENVIAR JUSTIFICATIVA',type='primary',disabled=len(text.strip())<35,use_container_width=True):
-                g['explanation_checks'][key]='pending';st.rerun()
-            if g['explanation_checks'].get(key)=='pending':
-                st.markdown('### 🧠 Debriefing — compare com a resposta orientadora')
-                st.markdown(f'<div class="brief">{q["model"]}</div>',unsafe_allow_html=True)
-                st.markdown('**Critérios de domínio:**')
-                st.write('① Explicou a ideia corretamente? ② Justificou como o custo cresce ou por que a estratégia é adequada? ③ Usou termos técnicos pertinentes?')
-                ck=st.radio('Autoavaliação:', ['Atendi aos três critérios','Atendi parcialmente — preciso revisar'],index=None,key=f'judge_{key}')
-                if st.button('✅ CONCLUIR ANÁLISE',disabled=ck is None,type='primary',use_container_width=True):score(ck.startswith('Atendi aos três'),text,'Autoavaliação do estudante, não correção automática');st.rerun()
+        a=st.radio('Selecione uma alternativa:',q['options'],index=None,key=key)
+        if st.button('⚡ CONFIRMAR RESPOSTA',type='primary',disabled=a is None,use_container_width=True):
+            score(a==q['answer'],a)
+            st.rerun()
     else:
         cl='correct' if g['last'] else 'wrong'
         title='ACERTO CRÍTICO! + XP' if g['last'] else 'ESCUDO DANIFICADO · REVISÃO ATIVADA'
         st.markdown(f'<div class="{cl}"><b>{title}</b><br>{q.get("explanation",q.get("model",""))}</div>',unsafe_allow_html=True)
         st.markdown(f'**🧠 Conceito-chave:** {q["concept"]}')
-        if q['t']=='explain':st.caption('Nas justificativas, o resultado foi declarado pelo próprio estudante; o aplicativo não realiza correção semântica.')
         if g['index']==len(s['questions'])-1:st.success(f'CHEFE DE SETOR ENFRENTADO: {s["boss"]}. Prepare-se para o próximo setor.')
         if st.button('➡️ PRÓXIMA MISSÃO' if not(g['stage']==len(STAGES)-1 and g['index']==len(s['questions'])-1) else '🏁 FINALIZAR CAMPANHA',type='primary',use_container_width=True):advance();st.rerun()
 
@@ -225,8 +251,8 @@ def end_screen():
         st.write(f'**{s["name"]} — {s["theme"]}:** {ok}/{len(arr)} objetivos')
         st.progress(ok/len(arr))
     st.markdown('### Próximos passos')
-    st.write('Releia os conceitos dos setores com menor desempenho. Priorize justificativas escritas: identificar n, contar operações, explicar se laços somam ou multiplicam e avaliar condições de uso de cada algoritmo.')
-    report=dict(aplicacao='NEON COMPLEXITY — Operação Big-O',agente=g['alias'],gerado_em=datetime.now().isoformat(timespec='seconds'),resumo=dict(xp=g['xp'],acertos=g['correct'],erros=g['wrong'],total=total,percentual=pct,melhor_combo=g['best_streak'],justificativas_autoavaliadas=True),historico=g['history'])
+    st.write('Releia os conceitos dos setores com menor desempenho. Para se preparar para a avaliação escrita, pratique justificar com suas palavras por que cada alternativa correta faz sentido.')
+    report=dict(aplicacao='NEON COMPLEXITY — Operação Big-O',agente=g['alias'],gerado_em=datetime.now().isoformat(timespec='seconds'),resumo=dict(xp=g['xp'],acertos=g['correct'],erros=g['wrong'],total=total,percentual=pct,melhor_combo=g['best_streak'],modalidade="multipla_escolha"),historico=g['history'])
     st.download_button('⬇️ BAIXAR RELATÓRIO JSON',json.dumps(report,ensure_ascii=False,indent=2),file_name='neon_complexity_resultado.json',mime='application/json',use_container_width=True)
     if st.button('🔁 JOGAR NOVAMENTE',type='primary',use_container_width=True):del st.session_state.game;st.rerun()
 
